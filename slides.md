@@ -70,8 +70,6 @@ _**Características de Aqua**_
 ---
 layout: figure-side
 figureUrl: https://i.postimg.cc/RZbpRHJc/Captura-de-pantalla-2024-05-28-103049.png
-figureFootnoteNumber: 3
-figureCaption: Creación del proyecto **"proyectoAqua"**
 ---
 
 # Instalación y Configuración
@@ -231,7 +229,34 @@ figureCaption: Informe de cobertura de los test proyecto
 **Captura del resultado de la ejecución**
 
 ---
+layout: figure
+figureUrl: https://resources.jetbrains.com/help/img/idea/aqua_web_inspector_overview.png
+figureCaption: Test de UI
+figureFootnoteNumber: 3
+---
 
+# Testing para todos los niveles del desarrollo
+
+
+<Footnotes separator>
+  <Footnote :number=3><a href="https://www.jetbrains.com/aqua/" rel="noreferrer" target="_blank">Aqua Documentation</a></Footnote>
+</Footnotes>
+
+---
+layout: figure
+figureUrl: https://s3.eu-central-1.amazonaws.com/test-architect.dev/wp-content/uploads/2022/11/10152753/aqua_kinds_tests.png
+figureCaption: Niveles de Testing
+figureFootnoteNumber: 4
+---
+
+# Testing para todos los niveles del desarrollo
+
+
+<Footnotes separator>
+  <Footnote :number=4><a href="https://www.jetbrains.com/aqua/" rel="noreferrer" target="_blank">Aqua Documentation</a></Footnote>
+</Footnotes>
+
+---
 
 # Muchas Gracias por su Atención
 
