@@ -135,8 +135,22 @@ figureCaption: Estructura del proyecto "proyectoAqua"
 
 **Comparación con otras herramientas**
 
+<v-clicks depth="2">
 
+- IntelliJ Idea
+  - Interfaz de usuario sofisticada y altamente personalizable
+  - Similar integración con CI/CD a Aqua
+  - Requiere una licencia
+- Eclipse
+  - Interfaz de usuario menos Junior-Friendly
+  - Código abierto y amplia comunidad
+  - Difícil integración con CI/CD
+- Katalon Studio
+  - Entorno robusto y fácil de usar
+  - No requiere conocimientos profundos en programación
+  - Opciones menos accesibles que en Aqua
 
+</v-clicks>
 
 ---
 
@@ -220,6 +234,8 @@ figureCaption: Informe de cobertura de los test proyecto
 
 
 # Muchas Gracias por su Atención
+
+## ¿Alguna pregunta?
 
 
 
