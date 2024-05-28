@@ -36,51 +36,65 @@ figureUrl: https://testsigma.com/blog/wp-content/uploads/Levels-of-testing-1.png
 
 # Introducción
 
-**<v-click>Introducción a Aqua</v-click>**
+_**<v-click>Introducción a Aqua</v-click>**_
 
 - <v-click>Herramienta de JetBrains para pruebas automatizadas</v-click>
-- <v-click>Facilita la gestión de pruebas en desarrollo de software</v-click>
+
+  **<v-click>¿Qué es una prueba de software?</v-click>**
+
 
 <!-- Imagen: Diagrama general de pruebas de software -->
 
 ---
+layout: figure-side
+figureUrl: https://www.jetbrains.com/aqua/img/Aqua_LP_videoPreview.png
+figureX: 2099, 12212
+figureCaption: Imagen oficial de JetBrains
+figureFootnoteNumber: 2
+---
 
 # Características Principales
 
-**Características de Aqua**
+_**Características de Aqua**_
 
-- Interfaz intuitiva
-- Soporte para múltiples tipos de pruebas
-- Integración con CI/CD
+- <v-click>Interfaz intuitiva</v-click>
+- <v-click>Integración con <v-mark class="red">CI/CD</v-mark></v-click>
+- <v-click>Flujo de trabajo optimizado</v-click>
+- <v-click>Enfoque especializado en testing</v-click>
+- <v-click>Gestión de resultados y reportes</v-click>
 
-<!-- Imagen: Captura de pantalla de la interfaz de Aqua -->
-![Interfaz de Aqua](https://path-to-aqua-interface-screenshot.png)
+<Footnotes separator>
+  <Footnote :number=2><a href="https://www.jetbrains.com/aqua/" rel="noreferrer" target="_blank">JetBrains</a></Footnote>
+</Footnotes>
 
+---
+layout: figure-side
+figureUrl: https://i.postimg.cc/RZbpRHJc/Captura-de-pantalla-2024-05-28-103049.png
+figureFootnoteNumber: 3
+figureCaption: Creación del proyecto **"proyectoAqua"**
 ---
 
 # Instalación y Configuración
 
 **Instalación y Configuración**
 
-- Pasos para instalar Aqua
-- Configuración inicial del proyecto
+<v-clicks depth="2">
 
-<!-- Imagen: Captura de pantalla del instalador de Aqua -->
-![Instalador de Aqua](https://path-to-aqua-installer.png)
+- Descargamos Aqua
+  - Configurar JDK
+  - Configurar Plugins
+- Creamos un proyecto Maven básico
+  - Creamos una clase Calculator
+  - Creamos el test CalculatorTest
 
----
+</v-clicks>
 
-# Comparación con otras Herramientas
-
-**Comparación con otras herramientas**
-
-- Ventajas y desventajas
-- Diferencias clave
-
-<!-- Imagen: Tabla comparativa de Aqua con IntelliJ IDEA, Eclipse y Katalon Studio -->
-![Tabla Comparativa](https://path-to-comparison-table.png)
 
 ---
+layout: figure-side
+figureUrl:  https://www.jetbrains.com/aqua/img/Aqua_LP_videoPreview.png
+---
+
 
 # Configuración del Proyecto
 
@@ -88,9 +102,34 @@ figureUrl: https://testsigma.com/blog/wp-content/uploads/Levels-of-testing-1.png
 
 - Estructura del proyecto
 - Manejo de dependencias
+```xml {3-4|9-10|all}
+<dependencies>
+    <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-engine</artifactId>
+        <version>5.8.2</version>
+        <scope>test</scope>
+    </dependency>
+    <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-api</artifactId>
+        <version>5.8.2</version>
+        <scope>test</scope>
+    </dependency>
+</dependencies>
+```
 
-<!-- Imagen: Captura de pantalla de un proyecto configurado en Aqua -->
-![Configuración del Proyecto en Aqua](https://path-to-aqua-project-setup.png)
+
+---
+
+# Comparación con otras Herramientas
+
+**Comparación con otras herramientas**
+
+
+
+<!-- Imagen: Tabla comparativa de Aqua con IntelliJ IDEA, Eclipse y Katalon Studio -->
+![Tabla Comparativa](https://path-to-comparison-table.png)
 
 ---
 
@@ -123,38 +162,4 @@ public class CalculatorTest {
         assertEquals(2, result, "5 - 3 should equal 2");
     }
 }
-<!-- Imagen: Código de una prueba unitaria en Java -->
-
-Ejecución de Pruebas
-Ejecución de Pruebas
-
-Visualización de resultados
-Depuración de errores
-<!-- Imagen: Captura de pantalla de la ejecución de pruebas en Aqua -->
-
-Análisis de Cobertura
-Análisis de Cobertura
-
-Cobertura de código
-Identificación de áreas no cubiertas
-<!-- Imagen: Captura de pantalla del análisis de cobertura en Aqua -->
-
-Caso Práctico
-Caso Práctico
-
-Aplicación de gestión de tareas
-Configuración y ejecución de pruebas
-<!-- Imagen: Diagrama o flujo de trabajo del caso práctico -->
-
-Conclusiones
-Conclusiones
-
-Beneficios de usar Aqua
-Mejora de la calidad del software
-<!-- Imagen: Equipo de desarrollo trabajando -->
-
-Preguntas y Respuestas
-Preguntas y Respuestas
-
-¿Dudas o comentarios?
-<!-- Imagen: Icono de preguntas y respuestas -->
+´´´
