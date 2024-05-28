@@ -89,10 +89,17 @@ figureCaption: Creación del proyecto **"proyectoAqua"**
 
 </v-clicks>
 
-
 ---
-layout: figure-side
-figureUrl:  https://www.jetbrains.com/aqua/img/Aqua_LP_videoPreview.png
+layout: figure
+figureUrl: https://i.postimg.cc/RZFS6bYC/image.png
+figureCaption: Estructura del proyecto "proyectoAqua"
+---
+
+# Estructura del Proyecto
+
+
+
+
 ---
 
 
@@ -100,23 +107,25 @@ figureUrl:  https://www.jetbrains.com/aqua/img/Aqua_LP_videoPreview.png
 
 **Configuración del Proyecto en Aqua**
 
-- Estructura del proyecto
-- Manejo de dependencias
+- <v-click>Estructura del proyecto</v-click>
+- <v-click>Manejo de dependencias</v-click>
 ```xml {3-4|9-10|all}
-<dependencies>
-    <dependency>
-        <groupId>org.junit.jupiter</groupId>
-        <artifactId>junit-jupiter-engine</artifactId>
-        <version>5.8.2</version>
-        <scope>test</scope>
-    </dependency>
-    <dependency>
-        <groupId>org.junit.jupiter</groupId>
-        <artifactId>junit-jupiter-api</artifactId>
-        <version>5.8.2</version>
-        <scope>test</scope>
-    </dependency>
-</dependencies>
+<v-click>
+  <dependencies>
+      <dependency>
+          <groupId>org.junit.jupiter</groupId>
+          <artifactId>junit-jupiter-engine</artifactId>
+          <version>5.8.2</version>
+          <scope>test</scope>
+      </dependency>
+      <dependency>
+          <groupId>org.junit.jupiter</groupId>
+          <artifactId>junit-jupiter-api</artifactId>
+          <version>5.8.2</version>
+          <scope>test</scope>
+      </dependency>
+  </dependencies>
+</v-click>
 ```
 
 
@@ -128,23 +137,16 @@ figureUrl:  https://www.jetbrains.com/aqua/img/Aqua_LP_videoPreview.png
 
 
 
-<!-- Imagen: Tabla comparativa de Aqua con IntelliJ IDEA, Eclipse y Katalon Studio -->
-![Tabla Comparativa](https://path-to-comparison-table.png)
 
 ---
 
 # Creación de Pruebas Unitarias
 
 **Pruebas Unitarias en Aqua**
-
-- Ejemplo con JUnit
-- Configuración de pruebas
-
 ```java
 package org.proyectoAqua;
 
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import ...
 
 public class CalculatorTest {
 
@@ -162,4 +164,63 @@ public class CalculatorTest {
         assertEquals(2, result, "5 - 3 should equal 2");
     }
 }
-´´´
+```
+
+---
+
+# Creación de Pruebas Unitarias
+
+**Clase Calculator para la realización de las pruebas**
+```java
+package org.proyectoAqua;
+
+public class Calculator {
+
+    public int add(int a, int b) {
+        return a + b;
+    }
+
+    public int subtract(int a, int b) {
+        return a - b;
+    }
+}
+
+```
+---
+layout: figure
+figureUrl: https://i.postimg.cc/FHzf9F5D/image.png
+figureCaption: Resultado CalculatorTest en el IDE de Aqua
+---
+
+# Ejecución de las pruebas
+
+**Captura del resultado de la ejecución**
+
+---
+layout: figure
+figureUrl: https://i.postimg.cc/vmQGQ3VM/image.png
+figureCaption: Resultado CalculatorTest en las pruebas de cobertura de Aqua
+---
+
+# Ejecución de las pruebas de cobertura
+
+**Captura del resultado de la ejecución**
+
+---
+layout: figure
+figureUrl: https://i.postimg.cc/2yTK775d/image.png
+figureCaption: Informe de cobertura de los test proyecto
+---
+
+# Informe resultante de la cobertura
+
+**Captura del resultado de la ejecución**
+
+---
+
+
+# Muchas Gracias por su Atención
+
+
+
+---
