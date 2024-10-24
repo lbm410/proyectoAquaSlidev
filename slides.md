@@ -1,267 +1,136 @@
 ---
-title: Aqua de JetBrains
-description: Herramienta Avanzada para Pruebas de Software
+title: CryptCleaner
+description: Proyecto de cifrado y descifrado en Python con AES
 theme: academic
 layout: figure-side
 figureFootnoteNumber: 1
-figureUrl: https://www.jetbrains.com/aqua/img/header-bg.svg
+figureUrl: https://cdn-icons-png.flaticon.com/512/3470/3470475.png
 ---
-# Aqua de JetBrains
 
-### Herramienta Avanzada para Pruebas de Software
+# CryptCleaner
 
-**Herramientas y Métodos de la Ingeniería del Software**
+### Implementación de Cifrado y Descifrado con AES
+
+**Teoría de Códigos y Criptografía**
 
 <div style="position: absolute; bottom: 20%; width: 100%; text-align: left;">
-  Lucas Barrientos Muñoz
-</div>
-
-<div style="position: absolute; bottom: 15%; width: 100%; text-align: left;">
-  Diego Castañeda Cortés
-</div>
-
-<div style="position: absolute; bottom: 10%; width: 100%; text-align: left;">
-  Abdelaziz Errabhi Rabtaoui
+  Grupo 11
+  <br>Lucas Barrientos Muñoz 
+  <br>Ignacio López Miralles
 </div>
 
 <Footnotes separator>
-  <Footnote :number=1><a href="https://www.jetbrains.com/aqua/" rel="noreferrer" target="_blank">JetBrains</a></Footnote>
+  <Footnote :number=1><a href="https://es.wikipedia.org/wiki/Criptograf%C3%ADa" rel="noreferrer" target="_blank">Criptografía</a></Footnote>
 </Footnotes>
 
 
 ---
 layout: figure
-figureUrl: https://testsigma.com/blog/wp-content/uploads/Levels-of-testing-1.png
----
-
-# Introducción
-
-_**<v-click>Introducción a Aqua</v-click>**_
-
-- <v-click>Herramienta de JetBrains para pruebas automatizadas</v-click>
-
-  **<v-click>¿Qué es una prueba de software?</v-click>**
-
-
-<!-- Imagen: Diagrama general de pruebas de software -->
-
----
-layout: figure-side
-figureUrl: https://www.jetbrains.com/aqua/img/Aqua_LP_videoPreview.png
-figureX: 2099, 12212
-figureCaption: Imagen oficial de JetBrains
-figureFootnoteNumber: 2
----
-
-# Características Principales
-
-_**Características de Aqua**_
-
-- <v-click>Interfaz intuitiva</v-click>
-- <v-click>Integración con <v-mark class="red">CI/CD</v-mark></v-click>
-- <v-click>Flujo de trabajo optimizado</v-click>
-- <v-click>Enfoque especializado en testing</v-click>
-- <v-click>Gestión de resultados y reportes</v-click>
-
-<Footnotes separator>
-  <Footnote :number=2><a href="https://www.jetbrains.com/aqua/" rel="noreferrer" target="_blank">JetBrains</a></Footnote>
-</Footnotes>
-
----
-layout: figure-side
-figureUrl: https://i.postimg.cc/RZbpRHJc/Captura-de-pantalla-2024-05-28-103049.png
----
-
-# Instalación y Configuración
-
-**Instalación y Configuración**
-
-<v-clicks depth="2">
-
-- Descargamos Aqua
-  - Configurar JDK
-  - Configurar Plugins
-- Creamos un proyecto Maven básico
-  - Creamos una clase Calculator
-  - Creamos el test CalculatorTest
-
-</v-clicks>
-
----
-layout: figure
-figureUrl: https://i.postimg.cc/RZFS6bYC/image.png
-figureCaption: Estructura del proyecto "proyectoAqua"
+figureUrl: https://i.ibb.co/njmSx3z/estructura.png
 ---
 
 # Estructura del Proyecto
 
+**Organización de archivos y carpetas**
 
 
-
----
-
-
-# Configuración del Proyecto
-
-**Configuración del Proyecto en Aqua**
-
-- <v-click>Estructura del proyecto</v-click>
-- <v-click>Manejo de dependencias</v-click>
-```xml {3-4|9-10|all}
-<v-click>
-  <dependencies>
-      <dependency>
-          <groupId>org.junit.jupiter</groupId>
-          <artifactId>junit-jupiter-engine</artifactId>
-          <version>5.8.2</version>
-          <scope>test</scope>
-      </dependency>
-      <dependency>
-          <groupId>org.junit.jupiter</groupId>
-          <artifactId>junit-jupiter-api</artifactId>
-          <version>5.8.2</version>
-          <scope>test</scope>
-      </dependency>
-  </dependencies>
-</v-click>
-```
 
 
 ---
+layout: figure-side
+figureUrl: https://i.ibb.co/RPd0hv5/main.png
+figureFootnoteNumber: 2
+---
 
-# Comparación con otras Herramientas
+# Función Principal
 
-**Comparación con otras herramientas**
+_**main.py**_
+
+- <v-click>Solicita al usuario si desea cifrar o descifrar un archivo.</v-click>
+- <v-click>Pide la ruta del archivo que el usuario desea procesar.</v-click>
+- <v-click>Llama a las funciones `encrypt_file` o `decrypt_file` para realizar las operaciones correspondientes.</v-click>
+
+<Footnotes separator>
+  <Footnote :number=2><a href="https://docs.python.org/3/tutorial/inputoutput.html" rel="noreferrer" target="_blank">Input y Output en Python</a></Footnote>
+</Footnotes>
+
+---
+layout: figure-side
+figureUrl: https://i.ibb.co/0BtDQD2/encrypt.png
+---
+
+# Cifrado de Archivos
+
+**Implementación de cifrado (encryptor.py)**
 
 <v-clicks depth="2">
 
-- IntelliJ Idea
-  - Interfaz de usuario sofisticada y altamente personalizable
-  - Similar integración con CI/CD a Aqua
-  - Requiere una licencia
-- Eclipse
-  - Interfaz de usuario menos Junior-Friendly
-  - Código abierto y amplia comunidad
-  - Difícil integración con CI/CD
-- Katalon Studio
-  - Entorno robusto y fácil de usar
-  - No requiere conocimientos profundos en programación
-  - Opciones menos accesibles que en Aqua
+- Carga o genera una clave AES de 256 bits.
+- Genera un Vector de Inicialización (IV).
+- Cifra el contenido del archivo con AES en modo CFB.
+- Guarda el archivo cifrado con la extensión `.enc`.
 
 </v-clicks>
 
----
-
-# Creación de Pruebas Unitarias
-
-**Pruebas Unitarias en Aqua**
-```java
-package org.proyectoAqua;
-
-import ...
-
-public class CalculatorTest {
-
-    @Test
-    public void testAddition() {
-        Calculator calculator = new Calculator();
-        int result = calculator.add(2, 3);
-        assertEquals(5, result, "2 + 3 should equal 5");
-    }
-
-    @Test
-    public void testSubtraction() {
-        Calculator calculator = new Calculator();
-        int result = calculator.subtract(5, 3);
-        assertEquals(2, result, "5 - 3 should equal 2");
-    }
-}
-```
 
 ---
-
-# Creación de Pruebas Unitarias
-
-**Clase Calculator para la realización de las pruebas**
-```java
-package org.proyectoAqua;
-
-public class Calculator {
-
-    public int add(int a, int b) {
-        return a + b;
-    }
-
-    public int subtract(int a, int b) {
-        return a - b;
-    }
-}
-
-```
----
-layout: figure
-figureUrl: https://i.postimg.cc/FHzf9F5D/image.png
-figureCaption: Resultado CalculatorTest en el IDE de Aqua
+layout: figure-side
+figureUrl: https://i.ibb.co/cb48xwq/decrypt.png
 ---
 
-# Ejecución de las pruebas
+# Descifrado de Archivos
 
-**Captura del resultado de la ejecución**
+**Implementación de descifrado (encryptor.py)**
 
----
-layout: figure
-figureUrl: https://i.postimg.cc/vmQGQ3VM/image.png
-figureCaption: Resultado CalculatorTest en las pruebas de cobertura de Aqua
----
+<v-clicks depth="2">
+  
+- Carga la clave AES que se utilizó durante el cifrado.
+- Lee el IV desde los primeros 16 bytes del archivo cifrado.
+- Descifra el contenido del archivo.
+- Guarda el archivo desencriptado con el sufijo `_decrypted`.
 
-# Ejecución de las pruebas de cobertura
+</v-clicks>
 
-**Captura del resultado de la ejecución**
-
----
-layout: figure
-figureUrl: https://i.postimg.cc/2yTK775d/image.png
-figureCaption: Informe de cobertura de los test proyecto
----
-
-# Informe resultante de la cobertura
-
-**Captura del resultado de la ejecución**
 
 ---
-layout: figure
-figureUrl: https://resources.jetbrains.com/help/img/idea/aqua_web_inspector_overview.png
-figureCaption: Test de UI
+layout: figure-side
+figureUrl: https://i.ibb.co/B2RWZFG/key.png
 figureFootnoteNumber: 3
 ---
 
-# Testing para todos los niveles del desarrollo
+# Gestión de Claves
 
+_**Gestión segura de claves en AES**_
+
+- <v-click>Si no existe una clave válida, se genera una nueva clave AES de 256 bits.</v-click>
+- <v-click>La clave se guarda en el archivo `key.key` en formato hexadecimal.</v-click>
+- <v-click>Para descifrar, la clave se carga y se convierte de hexadecimal a bytes.</v-click>
 
 <Footnotes separator>
-  <Footnote :number=3><a href="https://www.jetbrains.com/aqua/" rel="noreferrer" target="_blank">Aqua Documentation</a></Footnote>
+  <Footnote :number=3><a href="https://es.wikipedia.org/wiki/Advanced_Encryption_Standard" rel="noreferrer" target="_blank">AES</a></Footnote>
 </Footnotes>
+
+
+---
+layout: slide
+---
+
+# Logs y Manejo de Errores
+
+**Seguimiento del programa con logs**
+
+- <v-click>Registro de eventos importantes como la carga o generación de claves.</v-click>
+- <v-click>Mensajes detallados para depuración cuando ocurren errores.</v-click>
+- <v-click>Manejo de excepciones para garantizar que el programa no falle sin notificar al usuario.</v-click>
+
 
 ---
 layout: figure
-figureUrl: https://s3.eu-central-1.amazonaws.com/test-architect.dev/wp-content/uploads/2022/11/10152753/aqua_kinds_tests.png
-figureCaption: Niveles de Testing
-figureFootnoteNumber: 4
+figureUrl: https://example.com/thanks.png
 ---
 
-# Testing para todos los niveles del desarrollo
+# Muchas Gracias
 
-
-<Footnotes separator>
-  <Footnote :number=4><a href="https://www.jetbrains.com/aqua/" rel="noreferrer" target="_blank">Aqua Documentation</a></Footnote>
-</Footnotes>
-
----
-
-# Muchas Gracias por su Atención
-
-## ¿Alguna pregunta?
-
-
+### ¿Alguna Pregunta?
 
 ---
