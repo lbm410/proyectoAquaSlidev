@@ -4,7 +4,7 @@ description: Proyecto de cifrado y descifrado en Python con AES
 theme: academic
 layout: figure-side
 figureFootnoteNumber: 1
-figureUrl: https://cdn-icons-png.flaticon.com/512/3470/3470475.png
+figureUrl: https://i.ibb.co/sPzZBXQ/DALL-E-2024-10-24-17-45-1.png
 ---
 
 # CryptCleaner
@@ -126,7 +126,7 @@ layout: slide
 
 ---
 layout: figure
-figureUrl: https://example.com/thanks.png
+figureUrl: https://i.ibb.co/sPzZBXQ/DALL-E-2024-10-24-17-45-1.png
 ---
 
 # Muchas Gracias
