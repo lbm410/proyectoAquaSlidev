@@ -68,6 +68,7 @@ figureUrl: https://i.ibb.co/F8CLCPZ/3.png
 - Genera una clave RSA de 256 bytes.
 - Cifra la clave privada AES con la RSA generada.
 - Guarda la clave pública en un archivo.
+- Elimina posteriormente la clave pública del equipo objetivo.
 
 </v-clicks>
 
