@@ -92,6 +92,24 @@ figureUrl: https://i.ibb.co/cb48xwq/decrypt.png
 </v-clicks>
 
 ---
+layout: figure-side
+figureUrl: https://i.ibb.co/RHv3kBx/1.png
+---
+
+# Envío de Correos Electrónicos
+
+**Implementación de envío de correos (email_utils.py)**
+
+<v-clicks depth="2">
+  
+- Utiliza la librería smtplib para el envío de mails por smtp.
+- Utiliza la librería EmailMessage para el contenido del mail.
+- Envía el archivo de la clave pública RSA.
+
+</v-clicks>
+
+
+---
 layout: slide
 ---
 
