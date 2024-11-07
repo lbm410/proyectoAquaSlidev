@@ -9,7 +9,7 @@ figureUrl: https://i.ibb.co/sPzZBXQ/DALL-E-2024-10-24-17-45-1.png
 
 # CryptCleaner
 
-### Implementación de Cifrado y Descifrado con AES
+### Implementación de Cifrado y Descifrado RSA y UI
 
 **Teoría de Códigos y Criptografía**
 
@@ -26,7 +26,7 @@ figureUrl: https://i.ibb.co/sPzZBXQ/DALL-E-2024-10-24-17-45-1.png
 
 ---
 layout: figure
-figureUrl: https://i.ibb.co/njmSx3z/estructura.png
+figureUrl: https://i.ibb.co/6ZcJMgL/1.png
 ---
 
 # Estructura del Proyecto
@@ -38,37 +38,36 @@ figureUrl: https://i.ibb.co/njmSx3z/estructura.png
 
 ---
 layout: figure-side
-figureUrl: https://i.ibb.co/RPd0hv5/main.png
+figureUrl: https://i.ibb.co/0M68P8d/2.png
 figureFootnoteNumber: 2
 ---
 
-# Función Principal
+# Función Decoy
 
-_**main.py**_
+_**gui.py**_
 
-- <v-click>Solicita al usuario si desea cifrar o descifrar un archivo.</v-click>
-- <v-click>Pide la ruta del archivo que el usuario desea procesar.</v-click>
-- <v-click>Llama a las funciones `encrypt_file` o `decrypt_file` para realizar las operaciones correspondientes.</v-click>
+- <v-click>Muestra todas las opciones de un limpiador de archivos.</v-click>
+- <v-click>Al pulsar en limpiar, ejecuta el ransomware.</v-click>
+- <v-click>Llama a las funciones correspondientes para encriptar y solicitar el rescate.</v-click>
 
 <Footnotes separator>
-  <Footnote :number=2><a href="https://docs.python.org/3/tutorial/inputoutput.html" rel="noreferrer" target="_blank">Input y Output en Python</a></Footnote>
+  <Footnote :number=2><a href="https://docs.python.org/3/library/tk.html" rel="noreferrer" target="_blank">TKinter en Python</a></Footnote>
 </Footnotes>
 
 ---
 layout: figure-side
-figureUrl: https://i.ibb.co/0BtDQD2/encrypt.png
+figureUrl: https://i.ibb.co/F8CLCPZ/3.png
 ---
 
 # Cifrado de Archivos
 
-**Implementación de cifrado (encryptor.py)**
+**Implementación de cifrado RSA (encryptor.py)**
 
 <v-clicks depth="2">
 
-- Carga o genera una clave AES de 256 bits.
-- Genera un Vector de Inicialización (IV).
-- Cifra el contenido del archivo con AES en modo CFB.
-- Guarda el archivo cifrado con la extensión `.enc`.
+- Genera una clave RSA de 256 bytes.
+- Cifra la clave privada AES con la RSA generada.
+- Guarda la clave pública en un archivo.
 
 </v-clicks>
 
@@ -84,32 +83,12 @@ figureUrl: https://i.ibb.co/cb48xwq/decrypt.png
 
 <v-clicks depth="2">
   
-- Carga la clave AES que se utilizó durante el cifrado.
+- Carga la clave AES que se utilizó durante el cifrado y la desencripta con la RSA.
 - Lee el IV desde los primeros 16 bytes del archivo cifrado.
 - Descifra el contenido del archivo.
-- Guarda el archivo desencriptado con el sufijo `_decrypted`.
+- Guarda el archivo desencriptado con el sufijo `.decrypted`.
 
 </v-clicks>
-
-
----
-layout: figure-side
-figureUrl: https://i.ibb.co/B2RWZFG/key.png
-figureFootnoteNumber: 3
----
-
-# Gestión de Claves
-
-_**Gestión segura de claves en AES**_
-
-- <v-click>Si no existe una clave válida, se genera una nueva clave AES de 256 bits.</v-click>
-- <v-click>La clave se guarda en el archivo `key.key` en formato hexadecimal.</v-click>
-- <v-click>Para descifrar, la clave se carga y se convierte de hexadecimal a bytes.</v-click>
-
-<Footnotes separator>
-  <Footnote :number=3><a href="https://es.wikipedia.org/wiki/Advanced_Encryption_Standard" rel="noreferrer" target="_blank">AES</a></Footnote>
-</Footnotes>
-
 
 ---
 layout: slide
@@ -122,7 +101,6 @@ layout: slide
 - <v-click>Registro de eventos importantes como la carga o generación de claves.</v-click>
 - <v-click>Mensajes detallados para depuración cuando ocurren errores.</v-click>
 - <v-click>Manejo de excepciones para garantizar que el programa no falle sin notificar al usuario.</v-click>
-
 
 ---
 layout: figure
