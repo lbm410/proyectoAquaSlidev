@@ -9,7 +9,7 @@ figureUrl: https://i.ibb.co/sPzZBXQ/DALL-E-2024-10-24-17-45-1.png
 
 # CryptCleaner
 
-### Ransomware en un programa de limpeza de archivos basura
+### Ransomware en un programa de limpieza de archivos basura
 
 **Teoría de Códigos y Criptografía**
 
