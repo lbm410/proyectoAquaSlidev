@@ -9,7 +9,7 @@ figureUrl: https://i.ibb.co/sPzZBXQ/DALL-E-2024-10-24-17-45-1.png
 
 # CryptCleaner
 
-### Implementación de Certificados Digitales
+### Ransomware en un programa de limpeza de archivos basura
 
 **Teoría de Códigos y Criptografía**
 
@@ -33,11 +33,87 @@ figureUrl: https://i.ibb.co/zHB5JNm/Captura-de-pantalla-2024-11-28-175701.png
 
 - *Objetivo*: Simular la distribución de ransomware utilizando criptografía aplicada.  
 - *Enfoque*:  
-  - Crear un servidor legítimo con un certificado digital válido.  
-  - Simular un servidor fraudulento con un certificado no autenticado.  
-- *Relevancia*: Demostrar cómo los certificados digitales protegen contra ataques de suplantación.
+  - Cifrar y Descifrar archivos de manera oculta en el equipo de la víctima. 
+  - Enviar las claves por correo al atacante. 
+  - Simular un servidor fraudulento con un certificado no autenticado.
+  - Crear un instalador para el programa, ocultando el ransomware al antivirus de Windows.
+- *Relevancia*: 
+  - Demostrar cómo de importante es la criptografía en seguridad informática.
 
 
+
+
+---
+layout: figure-side
+figureUrl: https://i.ibb.co/0M68P8d/2.png
+figureFootnoteNumber: 2
+---
+
+# Función Decoy
+
+_**gui.py**_
+
+- <v-click>Muestra todas las opciones de un limpiador de archivos.</v-click>
+- <v-click>Al pulsar en limpiar, ejecuta el ransomware.</v-click>
+- <v-click>Llama a las funciones correspondientes para encriptar y solicitar el rescate.</v-click>
+
+<Footnotes separator>
+  <Footnote :number=2><a href="https://docs.python.org/3/library/tk.html" rel="noreferrer" target="_blank">TKinter en Python</a></Footnote>
+</Footnotes>
+
+---
+layout: figure-side
+figureUrl: https://i.ibb.co/F8CLCPZ/3.png
+---
+
+# Cifrado de Archivos
+
+**Implementación de cifrado RSA (encryptor.py)**
+
+<v-clicks depth="2">
+
+- Genera una clave RSA de 256 bytes.
+- Cifra la clave privada AES con la RSA generada.
+- Guarda la clave pública en un archivo.
+- Elimina posteriormente la clave pública del equipo objetivo.
+
+</v-clicks>
+
+
+---
+layout: figure-side
+figureUrl: https://i.ibb.co/cb48xwq/decrypt.png
+---
+
+# Descifrado de Archivos
+
+**Implementación de descifrado (encryptor.py)**
+
+<v-clicks depth="2">
+  
+- Carga la clave AES que se utilizó durante el cifrado y la desencripta con la RSA.
+- Lee el IV desde los primeros 16 bytes del archivo cifrado.
+- Descifra el contenido del archivo.
+- Guarda el archivo desencriptado con el sufijo `.decrypted`.
+
+</v-clicks>
+
+---
+layout: figure-side
+figureUrl: https://i.ibb.co/RHv3kBx/1.png
+---
+
+# Envío de Correos Electrónicos
+
+**Implementación de envío de correos (email_utils.py)**
+
+<v-clicks depth="2">
+  
+- Utiliza la librería smtplib para el envío de mails por smtp.
+- Utiliza la librería EmailMessage para el contenido del mail.
+- Envía el archivo de la clave pública RSA.
+
+</v-clicks>
 
 
 ---
@@ -89,7 +165,7 @@ figureUrl: https://i.ibb.co/NTtL8fd/Captura-de-pantalla-2024-11-28-180756.png
 
 ---
 layout: figure-side
-figureUrl: https://i.ibb.co/yNYdnPr/Captura-de-pantalla-2024-11-28-181326.png
+figureUrl: https://i.ibb.co/Ltq6sgw/Captura-de-pantalla-2024-12-19-113701.png
 ---
 
 # Resultados
@@ -104,22 +180,24 @@ figureUrl: https://i.ibb.co/yNYdnPr/Captura-de-pantalla-2024-11-28-181326.png
 - Respuesta adecuada en ambos casos:  
   - Descarga segura desde el servidor legítimo.  
   - Advertencias antes de interactuar con el servidor falso.
+  - Instalación segura del cliente de limpieza maligno.
 
 </v-clicks>
 
 ---
 layout: figure-side
-figureUrl: https://www.linuxadictos.com/wp-content/uploads/OpenSSL_logo.svg.png
+figureUrl: https://i.ibb.co/sPzZBXQ/DALL-E-2024-10-24-17-45-1.png
 ---
 
 # Conclusiones
 
-**Implementación de Certificados Digitales**
+**Ransomware CryptCleaner**
 
 <v-clicks depth="2">
   
-- Los certificados digitales son críticos para garantizar la seguridad en las comunicaciones.  
-- Este proyecto ilustra la importancia de la criptografía aplicada en escenarios prácticos.  
+- Se ha implementado un sistema de cifrado y descifrado oculto al usuario.
+- Los certificados digitales son críticos para garantizar la seguridad en las comunicaciones.
+- Este proyecto ilustra la importancia de la criptografía aplicada en escenarios prácticos.
 - **Lección clave**: La educación del usuario es esencial para reducir riesgos en conexiones inseguras.
 
 </v-clicks>
